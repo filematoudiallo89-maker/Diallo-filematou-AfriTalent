@@ -1,23 +1,187 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AfriTalent — freelances</title>
-<!-- Bootstrap 5 via CDN : feuille de style -->
-<link
-href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-rel="stylesheet">
-<!-- Votre feuille de style personnelle -->
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfriTalent — Freelances</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<!-- Le contenu de la page sera ajoute ici -->
-<!-- Bootstrap 5 via CDN : script JavaScript -->
-<script
-src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-></script>
-<!-- Votre script JavaScript -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <i class="fas fa-code-branch"></i>
+            AfriTalent
+        </a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link active" href="freelances.html">Freelances</a></li>
+                <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+            <a href="#" class="btn btn-outline-light ms-3">Rejoindre</a>
+        </div>
+    </div>
+</nav>
+
+<main class="pt-5 mt-4">
+    <div class="container py-5">
+        <h1 class="text-center mb-4">Nos Freelances</h1>
+        
+        <!-- Filtres -->
+        <div class="filters-container mb-5">
+            <h5 class="text-center mb-3">Filtrer par catégorie</h5>
+            <div class="d-flex justify-content-center gap-2 flex-wrap">
+                <button class="btn btn-filter active" data-category="all">Tous</button>
+                <button class="btn btn-filter" data-category="web">💻 Développement Web</button>
+                <button class="btn btn-filter" data-category="design">🎨 Design</button>
+                <button class="btn btn-filter" data-category="marketing">📢 Marketing</button>
+                <button class="btn btn-filter" data-category="data">🤖 Data & IA</button>
+            </div>
+        </div>
+        
+        <!-- Grille des freelances -->
+        <div class="row g-4" id="freelancesGrid">
+            <!-- Freelance 1 - Web -->
+            <div class="col-md-6 col-lg-4 freelance-card" data-category="web">
+                <div class="card freelance-card-inner h-100">
+                    <img src="https://randomuser.me/api/portraits/men/1.jpg" class="card-img-top" alt="Freelance">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Mamadou Diop</h5>
+                        <p class="card-text text-muted">Développeur Full-Stack</p>
+                        <p>Expert React, Node.js, MongoDB</p>
+                        <div class="stars mb-2">★★★★★ (4.9)</div>
+                        <p class="fw-bold">35€/h</p>
+                        <button class="btn btn-primary btn-sm">Voir le profil</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Freelance 2 - Design -->
+            <div class="col-md-6 col-lg-4 freelance-card" data-category="design">
+                <div class="card freelance-card-inner h-100">
+                    <img src="https://randomuser.me/api/portraits/women/1.jpg" class="card-img-top" alt="Freelance">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Fatou Ndiaye</h5>
+                        <p class="card-text text-muted">UI/UX Designer</p>
+                        <p>Figma, Adobe XD, Prototypage</p>
+                        <div class="stars mb-2">★★★★★ (5.0)</div>
+                        <p class="fw-bold">40€/h</p>
+                        <button class="btn btn-primary btn-sm">Voir le profil</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Freelance 3 - Marketing -->
+            <div class="col-md-6 col-lg-4 freelance-card" data-category="marketing">
+                <div class="card freelance-card-inner h-100">
+                    <img src="https://randomuser.me/api/portraits/men/2.jpg" class="card-img-top" alt="Freelance">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Oumar Sarr</h5>
+                        <p class="card-text text-muted">Marketing Digital</p>
+                        <p>SEO, Google Ads, Social Media</p>
+                        <div class="stars mb-2">★★★★☆ (4.7)</div>
+                        <p class="fw-bold">30€/h</p>
+                        <button class="btn btn-primary btn-sm">Voir le profil</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Freelance 4 - Web -->
+            <div class="col-md-6 col-lg-4 freelance-card" data-category="web">
+                <div class="card freelance-card-inner h-100">
+                    <img src="https://randomuser.me/api/portraits/women/2.jpg" class="card-img-top" alt="Freelance">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Aïcha Diallo</h5>
+                        <p class="card-text text-muted">Développeuse Front-end</p>
+                        <p>Vue.js, Tailwind, APIs</p>
+                        <div class="stars mb-2">★★★★★ (4.8)</div>
+                        <p class="fw-bold">32€/h</p>
+                        <button class="btn btn-primary btn-sm">Voir le profil</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Freelance 5 - Data -->
+            <div class="col-md-6 col-lg-4 freelance-card" data-category="data">
+                <div class="card freelance-card-inner h-100">
+                    <img src="https://randomuser.me/api/portraits/men/3.jpg" class="card-img-top" alt="Freelance">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Ibrahima Kane</h5>
+                        <p class="card-text text-muted">Data Scientist</p>
+                        <p>Python, Machine Learning, SQL</p>
+                        <div class="stars mb-2">★★★★★ (4.9)</div>
+                        <p class="fw-bold">50€/h</p>
+                        <button class="btn btn-primary btn-sm">Voir le profil</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Freelance 6 - Design -->
+            <div class="col-md-6 col-lg-4 freelance-card" data-category="design">
+                <div class="card freelance-card-inner h-100">
+                    <img src="https://randomuser.me/api/portraits/women/3.jpg" class="card-img-top" alt="Freelance">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Mariama Ba</h5>
+                        <p class="card-text text-muted">Graphiste Designer</p>
+                        <p>Illustrator, Photoshop, Branding</p>
+                        <div class="stars mb-2">★★★★★ (4.8)</div>
+                        <p class="fw-bold">28€/h</p>
+                        <button class="btn btn-primary btn-sm">Voir le profil</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h5><i class="fas fa-code-branch"></i> AfriTalent</h5>
+                <p>Plateforme freelance dédiée aux talents africains.</p>
+            </div>
+            <div class="col-md-3">
+                <h5>Liens utiles</h5>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="freelances.html">Freelances</a></li>
+                    <li><a href="tarifs.html">Tarifs</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>Ressources</h5>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Aide</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>Contact</h5>
+                <p><i class="fas fa-envelope"></i> contact@afritalent.com</p>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <p>&copy; <span id="year"></span> AfriTalent</p>
+        </div>
+    </div>
+</footer>
+
+<button id="backToTop" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
