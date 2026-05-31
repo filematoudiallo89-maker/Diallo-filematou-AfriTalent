@@ -7,7 +7,7 @@
    VARIABLES CSS (6+ variables)
    ============================================ */
 :root {
-    /* Couleurs principales */
+    /* Couleurs */
     --primary: #0d6efd;
     --primary-dark: #0a58ca;
     --secondary: #6c757d;
@@ -15,9 +15,6 @@
     --dark: #1e293b;
     --light: #f8fafc;
     --white: #ffffff;
-    --black: #000000;
-    --gray-100: #f3f4f6;
-    --gray-600: #6b7280;
     
     /* Polices */
     --font-heading: 'Outfit', sans-serif;
@@ -29,17 +26,6 @@
     --spacing-md: 1.5rem;
     --spacing-lg: 2rem;
     --spacing-xl: 3rem;
-    --spacing-xxl: 5rem;
-    
-    /* Ombres */
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-    
-    /* Border radius */
-    --radius-md: 0.5rem;
-    --radius-lg: 1rem;
-    --radius-xl: 1.5rem;
 }
 
 /* ============================================
@@ -49,10 +35,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 body {
@@ -86,12 +68,7 @@ img {
 .navbar {
     padding: 1rem 0;
     transition: all 0.3s ease;
-    box-shadow: var(--shadow-md);
-}
-
-.navbar.scrolled {
-    padding: 0.5rem 0;
-    background: var(--dark) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .navbar-brand {
@@ -134,12 +111,6 @@ img {
     height: 45px;
     cursor: pointer;
     z-index: 1000;
-    transition: all 0.3s ease;
-}
-
-.back-to-top:hover {
-    background: var(--primary-dark);
-    transform: translateY(-3px);
 }
 
 /* ============================================
