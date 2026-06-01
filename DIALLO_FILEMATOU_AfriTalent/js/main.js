@@ -7,7 +7,7 @@ if (yearSpan) {
 }
 
 // ============================================
-// 2. NAVBAR DYNAMIQUE AU SCROLL (effet shrink)
+// 2. NAVBAR DYNAMIQUE AU SCROLL
 // ============================================
 const navbar = document.querySelector('.navbar');
 
@@ -29,12 +29,14 @@ window.addEventListener('scroll', () => {
 const backToTop = document.getElementById('backToTop');
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-        backToTop.style.display = 'flex';
-        backToTop.style.opacity = '1';
-    } else {
-        backToTop.style.display = 'none';
-        backToTop.style.opacity = '0';
+    if (backToTop) {
+        if (window.scrollY > 300) {
+            backToTop.style.display = 'flex';
+            backToTop.style.opacity = '1';
+        } else {
+            backToTop.style.display = 'none';
+            backToTop.style.opacity = '0';
+        }
     }
 });
 
